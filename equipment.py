@@ -13,7 +13,7 @@ def add_equipment(db):
 
     # Create a dictionary for the cloud document
     details = {
-        "cost":cost, 
+        "cost": cost, 
         "description": description, 
         "part_num": part_num, 
         "category": category, 
@@ -23,7 +23,7 @@ def add_equipment(db):
         "active": True
     }
 
-    # export the date to the firestore database - equipment collection
+    # export the data to the firestore database - equipment collection
     db.collection("equipment").document(equip_name).set(details)
     input("The equipment has been added. Press enter to return to the main menu.")
 
@@ -34,17 +34,19 @@ def view_equipment(db):
     for doc in existing:
         print(f" - {doc.id}")
 
-    equip_name = input('\nWhat item do you want to view -> ')
-    result = db.collection("equipment").document(equip_name).get()
+    view_detail = input("Do you want to view item details? (y/n) -> ") or "n"
+    if view_detail.lower() == "y":
+        equip_name = input('\nWhat item do you want to view -> ')
+        result = db.collection("equipment").document(equip_name).get()
 
-    # Handle an invalid entry
-    if result.exists:
-        print(result.to_dict())
-    else:
-        print("Sorry, that is not an existing option.")
+        # Handle an invalid entry
+        if result.exists:
+            print(result.to_dict())
+        else:
+            print("Sorry, that is not an existing option.")
     
-    print()
-    input("Press enter to return to the main menu.")
+        print()
+        input("Press enter to return to the main menu.")
 
 # Displays existing equipment and prompts for editing
 def edit_equipment(db):

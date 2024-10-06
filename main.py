@@ -7,7 +7,7 @@ db = firestore.client()
 
 # Import functions from "equipment.py" & customers.py
 from equipment import add_equipment, view_equipment, edit_equipment, delete_equipment
-from customers import add_customer
+from customers import add_customer, quote_customer
 
 # Menu Options for User Interface
 def menu():
@@ -19,8 +19,7 @@ Select and Options:
   4. Delete Equipment                 
   5. Add a Customer                   
   6. Build a Quote
-  7. Delete a Quote
-  8. Exit
+  7. Exit
 -> """)
 
     # Define Actions Based on User Selection
@@ -39,7 +38,10 @@ Select and Options:
     elif(choice == "5"):
         add_customer(db)
         menu()
-    elif(choice == "8"):
+    elif(choice == "6"):
+        quote_customer(db)
+        menu()
+    elif(choice == "7"):
         print("You have exited the program.\n")
         quit()
     else:
