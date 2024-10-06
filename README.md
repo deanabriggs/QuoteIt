@@ -5,8 +5,6 @@ This project addresses the issue of sales reps needing to give quick estimates t
 
 The user (sales rep) is presented with a menu of options and prompts in Python. Python functions calculate and format entered data for customers, equipments, and quotes. Then, Python provides a quote to the rep and transmits the data to the Cloud Firestore database so it can be search or retrieved for other purposes.
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of the cloud database.}
-
 [Software Demo Video](https://www.loom.com/share/97481485512b48c7a11e0ac1ef673f31?sid=208bcc92-e28c-4962-b195-ed82f9473fca)
 
 # Cloud Database
