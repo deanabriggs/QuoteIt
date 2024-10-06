@@ -60,7 +60,7 @@ def add_quote_subcollection(db, customerId):
        
         # calculate total quote values
         equip_data = equip_doc.to_dict()
-        install_hours += equip_data.get("labor_hours")
+        install_hours += equip_data.get("labor_hours") * quantity
         equip_cost += equip_data.get("cost") * quantity
         retail += equip_data.get("retail") * quantity
 
