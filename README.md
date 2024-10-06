@@ -7,7 +7,7 @@ The user (sales rep) is presented with a menu of options and prompts in Python. 
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of the cloud database.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.loom.com/share/97481485512b48c7a11e0ac1ef673f31?sid=208bcc92-e28c-4962-b195-ed82f9473fca)
 
 # Cloud Database
 This software uses Googles Cloud Firestore database. This is a NoSQL database, meaning it does not follow the relational structure of traditional SQL database. Data is stored in documents within collections. Documents cannot store other documents, but they can be related to other collections.

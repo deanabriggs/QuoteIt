@@ -5,7 +5,7 @@ cred = credentials.Certificate("credentials.json")
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
-# Import functions from "equipment.py" & customers.py
+# Import functions from "equipment.py" & "customers.py"
 from equipment import add_equipment, view_equipment, edit_equipment, delete_equipment
 from customers import add_customer, quote_customer
 
